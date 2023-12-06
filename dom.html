@@ -1,61 +1,42 @@
-let body = document.querySelector("body")
-let field = document.querySelectorAll("input")[1];
-let budget = document.getElementById("budget");
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Page title</title>
+    <link rel="stylesheet" href="dom.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+   <h1>Breakfast Sandwich</h1> 
+   <button class="A">Theme A</button>
+   <button class="B">Theme B</button>
+   <button class="C">Theme C</button>
+   <br><br>
+   <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTr4vlPXqPayqmz1oYsFT6jE5efRZ0-T9kv0Q&usqp=CAU" alt="" width="200px" height="150px">
+   <p>Price: <strong>$1.99</strong></p>
+   <strong>Budget</strong>:<br>
+   <input onclick="show()" id="budget" type="number">
+   <br>
+   <strong>Qty:</strong>
+   <br><input onclick="qty()" type="number">
+   <br>
+   <h4>Total Price:</h4>
+   <h3 id="afford"></h3>
+    <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <div class="container">
+    <div><a href="https://x.com/olaniyanposi?t=GrGO6I2uqoUXxGA9J90ivg&s=09"><i class="fa-brands fa-square-x-twitter"></i></a> <a href="https://wa.me/+2348148524156"><i class="fa-brands fa-whatsapp"></i></a>
+    </div>
+    <h4>Copyright © 2023
+  </h4></div>
 
-let total = document.querySelector("h4")
-let afford = document.getElementById("afford")
-let buttonA = document.querySelectorAll("button")[0]
-let buttonB = document.querySelectorAll("button")[1]
-let buttonC = document.querySelectorAll("button")[2]
-let image = document.querySelector("img")
+</body>
 
-function getTotal () {
-    let sumTotal = field.value*1.99
-    let budgets = budget.value
-    total.innerText = "Total Price: $"+sumTotal 
-    if (budgets > sumTotal
-        ) {
-        afford.innerText = `You can afford this! 😀 You have $${budgets-sumTotal} left in budget`
-    } else if (budgets < sumTotal){
-        afford.innerText = `You can't afford this, you need $${sumTotal-budgets} more 😒`
-    }
-}
-
-field.addEventListener("change", getTotal)
-
-
-function toThemeA () {
-    body.classList.remove("themeB", "themeC")
-    body.classList.add("themeA")
-}
-buttonA.addEventListener("click", toThemeA)
-
-
-function toThemeB () {
-    body.classList.remove("themeA", "themeC")
-    body.classList.add("themeB")
-}
-buttonB.addEventListener("click", toThemeB)
-
-function toThemeC () {
-    body.classList.remove("themeA", "themeB")
-    body.classList.add("themeC")
-}
-buttonC.addEventListener("click", toThemeC)
-
-
-
-function changeImage() {
-    return image.src = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQOei3iFoNSct5t2dQbJJon5snlD_ckMiJPf3L7fPMFzX19wZ90Zugp-M0&s=10"
-}
-
-image.addEventListener("click", changeImage)
-
-
-let show = () => {
-    budget.placeholder = "budget..."
-}
-
-let qty = () => {
-    field.placeholder = "quantity..."
-}
+<script src="dom.js"></script>
+</html>
