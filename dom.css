@@ -1,0 +1,51 @@
+.A, .B, .C {
+    color: black;
+    background-color: lightblue;
+    border: 2px solid;
+    border-radius: 4px;
+    margin: 8px;
+}
+
+.A:hover,.B:hover,.C:hover {
+    background-color: whitesmoke;
+    border-bottom: 3px solid teal;
+}
+
+.themeA {
+    background-color: seashell;
+}
+
+.themeB {
+    background-color: lightcyan;
+}
+
+.themeC {
+    background-color: lightsteelblue;
+}
+
+input {
+    border-radius: 5px;
+}
+
+.fa-square-x-twitter {
+    font-size: 30px;
+}
+
+.fa-whatsapp {
+    font-size: 30px;
+    color: green;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: -5px;
+    flex-shrink: 40px;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
